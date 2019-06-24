@@ -1,0 +1,26 @@
+<p>
+  employee-list works!
+</p>
+{{empDetail?.age}}
+{{empDetail?.id}}
+{{empDetailx?.name}}
+{{empList | json}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empList">
+      <td>{{emp.id}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td><button class="btn btn-primary" (click)="sendToParent(emp)">Select Employee</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,16 @@
+<p>
+  EMployeee Works !!
+</p>
+{{empname}}
+
+<div *ngIf="isValid" [innerText]="department">
+
+</div>
+
+
+<button (click)="toggle()">Toggle</button>
+<button class="btn btn-success" (click)="refresh()">Refresh</button>
+
+<app-employee-list [empDetail]="detail" [empList]="list" (selectdEmployee)="receiveFromChild($event)">
+
+</app-employee-list>
